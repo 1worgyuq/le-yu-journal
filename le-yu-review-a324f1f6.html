@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼体育 · 简洁博客式介绍页</title>
+  <style>
+    /* 深色头图 + 浅色正文区 + 强调色链接 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      background: #f4f5f7;
+      color: #1e1e2a;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header-hero {
+      background: #0f1119;  /* 深色头图 */
+      background-image: radial-gradient(circle at 20% 30%, #23273a 0%, #0b0d14 100%);
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      color: #e8eaf0;
+      border-bottom: 1px solid #2b2f42;
+    }
+
+    .header-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 550;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+      color: #f0f2f8;
+    }
+
+    .header-hero .subhead {
+      font-size: 1.1rem;
+      color: #b2b9cf;
+      max-width: 38rem;
+      margin: 0.3rem auto 0;
+      border-top: 1px solid #2e334a;
+      padding-top: 0.75rem;
+      display: inline-block;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .main-content {
+      background: #ffffff;
+      margin: -1.2rem auto 0;
+      padding: 2.8rem 2.4rem;
+      border-radius: 18px 18px 6px 6px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+      position: relative;
+      z-index: 2;
+    }
+
+    .article-title {
+      font-size: 1.8rem;
+      font-weight: 520;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+      color: #181c2a;
+    }
+
+    .article-meta {
+      font-size: 0.9rem;
+      color: #6f768a;
+      border-bottom: 1px solid #e6e8ed;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 1.2rem;
+    }
+
+    .article-meta span {
+      display: inline-block;
+    }
+
+    .article-meta .label {
+      color: #858da3;
+    }
+
+    .lede {
+      font-size: 1.1rem;
+      color: #2c3244;
+      background: #f2f3f8;
+      padding: 1rem 1.4rem;
+      border-left: 4px solid #3461c7;
+      margin-bottom: 2rem;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .section-block {
+      margin: 2.2rem 0;
+    }
+
+    .section-block h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #1a1f30;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-block p {
+      margin-bottom: 1.25rem;
+      color: #232738;
+    }
+
+    .section-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inset-quote {
+      background: #f8f9fe;
+      border-left: 4px solid #bcc3db;
+      padding: 1rem 1.4rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-style: normal;
+      color: #2d3448;
+    }
+
+    .inset-quote .quote-label {
+      font-weight: 520;
+      color: #1c2340;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .inset-quote p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .link-highlight a {
+      color: #2c5bd6;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.1s;
+    }
+
+    .link-highlight a:hover {
+      border-bottom: 1px solid #2c5bd6;
+      color: #153a9c;
+    }
+
+    .visit-note {
+      margin: 2.4rem 0 1rem;
+      padding: 1.2rem 1.6rem;
+      background: #edf0f7;
+      border-radius: 14px;
+      font-size: 1rem;
+      color: #1b2135;
+      border: 1px solid #d9deeb;
+    }
+
+    .visit-note strong {
+      font-weight: 520;
+    }
+
+    .faq-mini {
+      margin-top: 2.2rem;
+      border-top: 1px solid #e4e7ef;
+      padding-top: 1.6rem;
+    }
+
+    .faq-mini dt {
+      font-weight: 500;
+      margin: 1rem 0 0.2rem;
+      color: #0a1023;
+    }
+
+    .faq-mini dd {
+      margin-left: 0.2rem;
+      color: #353b50;
+      padding-left: 0.8rem;
+      border-left: 2px solid #dde0eb;
+    }
+
+    .faq-mini dd + dt {
+      margin-top: 1.2rem;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e2e5ef;
+      font-size: 0.88rem;
+      color: #5e6480;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .header-hero { padding: 2.5rem 1rem 3.2rem; }
+      .header-hero h1 { font-size: 2.1rem; }
+      .main-content { padding: 1.8rem 1.2rem; margin-top: -0.8rem; }
+      .article-title { font-size: 1.4rem; }
+      .lede { font-size: 1rem; padding: 0.8rem 1rem; }
+      .visit-note { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-hero">
+    <h1>乐鱼体育</h1>
+    <div class="subhead">运动 · 数据 · 日常</div>
+  </header>
+
+  <div class="container">
+    <main class="main-content">
+
+      <article>
+        <h1 class="article-title">不只是赛事：一种围绕运动的生活方式</h1>
+        <div class="article-meta">
+          <span><span class="label">话题</span> 运动文化</span>
+          <span><span class="label">阅读</span> 约 6 分钟</span>
+        </div>
+
+        <div class="lede">
+          运动早已超越竞技场的边界，成为当代人调节节奏、建立连接的一种语言。
+          从日常训练到数据洞察，再到社区分享，体育生态正在变得更轻、更近。
+        </div>
+
+        <div class="section-block">
+          <h2>运动场景的碎片化与整合</h2>
+          <p>
+            过去十年，体育内容的核心载体从赛事直播延伸到了短视频、训练日志、即时数据面板。
+            不管是早晨的跑者日记，还是下班后的篮球战术复盘，人们更倾向于在碎片时间里获取高密度的运动信息。
+            这种变化使得体育平台需要兼顾专业内容与轻量交互，而不仅仅是赛事结果。
+          </p>
+          <p>
+            以篮球、足球等主流项目为例，用户不仅关注胜负，也开始深究球员效率值、控球率分布、跑动热点图。
+            这些数据既服务于资深爱好者，也为入门者提供了一种“可读”的观赛框架。
+            运动数据的可视化，正在降低体育分析的门槛。
+          </p>
+        </div>
+
+        <div class="section-block">
+          <h2>从观看到参与：社区的粘性</h2>
+          <p>
+            体育社区的生命力往往来自“共同体验”——实时讨论、战术猜测、甚至赛后观点碰撞。
+            在中文互联网环境中，这类互动往往围绕几个核心平台展开。其中，<span class="link-highlight"><a href="https://le-yu-ty.com.cn">乐鱼体育</a></span> 所代表的聚合式体验，将赛事资讯、数据解读和用户讨论整合在统一的信息流中，减少了在不同页面间切换的成本。
+          </p>
+          <p>
+            这种整合的意义在于：当用户完成一次比赛浏览之后，可以自然过渡到球员数据对比、赛季趋势图，或是查看社区里关于下一场阵容的分析帖。
+            信息的连续流动，让“看球”变成了“理解球”。
+          </p>
+        </div>
+
+        <div class="inset-quote">
+          <span class="quote-label">📌 引用提示</span>
+          <p>
+            “最好的运动内容，是让读者在离开页面之后，还能带着一个可讨论的观点。”
+            这也是乐鱼体育内容模块的设计思路之一：信息不只是罗列，而是提供上下文。
+          </p>
+        </div>
+
+        <div class="section-block">
+          <h2>数据之外的叙事</h2>
+          <p>
+            体育的魅力藏于数字，也溢于数字。一支球队的连胜背后可能是战术微调，一名球员的投篮热区变化也许反映了伤病后的打法转型。
+            好的体育内容需要将冷冰冰的数字翻译成有温度的叙事，既尊重事实，也保留解读空间。
+          </p>
+          <p>
+            这也是为什么，<span class="link-highlight"><a href="https://le-yu-ty.com.cn">乐鱼体育</a></span> 在页面中持续引入赛事回顾、趋势简报等轻专题内容，帮助用户在比赛密集期快速建立全局视角。
+          </p>
+        </div>
+
+        <div class="visit-note">
+          <strong>访问句 · 简洁直达</strong><br>
+          如果你想在日常信息流中更高效地关注体育内容，可以试试将 <span class="link-highlight"><a href="https://le-yu-ty.com.cn">乐鱼体育</a></span> 加入书签栏。
+          页面布局偏重信息层级，适合快速扫读。
+        </div>
+
+        <dl class="faq-mini">
+          <dt>❓ 乐鱼体育主要覆盖哪些运动？</dt>
+          <dd>以足球、篮球为核心，同时包含网球、电竞、综合格斗等项目的资讯与数据面板。</dd>
+          <dt>❓ 内容更新节奏如何？</dt>
+          <dd>重点赛事期间保持实时更新，日常时段每天发布多篇赛事前瞻、数据解读及社区精选讨论。</dd>
+          <dt>❓ 是否需要注册才能浏览？</dt>
+          <dd>大部分内容无需登录即可阅读，部分互动功能（如评论、个人收藏）建议注册后使用。</dd>
+        </dl>
+
+      </article>
+
+      <div class="footer-note">
+        © 简洁博客式 · 乐鱼体育介绍页 · 内容仅供参考，不构成任何建议或承诺。
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
