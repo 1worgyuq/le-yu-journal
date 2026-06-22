@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xingkong.com · 稳定的入口与清晰的页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f9f9fb;
+      color: #1e1e2a;
+      line-height: 1.7;
+    }
+
+    /* 深色头图 —— 稳重、不张扬 */
+    .hero {
+      background: #1c1c2a;
+      background-image: radial-gradient(circle at 20% 30%, #2e2e42 0%, #14141e 90%);
+      color: #eaeef0;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 350;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+      word-break: break-word;
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      color: #b9c3cc;
+      max-width: 600px;
+      margin: 0 auto 1.4rem;
+      font-weight: 300;
+    }
+
+    .hero .meta-line {
+      font-size: 0.95rem;
+      color: #8899aa;
+      border-top: 1px solid #2e3a48;
+      display: inline-block;
+      padding-top: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    /* 浅色正文区 */
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.8rem 4rem;
+      background-color: #f9f9fb;
+    }
+
+    .content p {
+      margin-bottom: 1.8rem;
+      font-size: 1.05rem;
+      color: #2b2b38;
+    }
+
+    .content p:last-of-type {
+      margin-bottom: 2.6rem;
+    }
+
+    /* 引用提示框 */
+    .callout {
+      background: #eef1f5;
+      border-left: 5px solid #3b6ea5;
+      padding: 1.3rem 1.8rem;
+      margin: 2rem 0 2.2rem;
+      border-radius: 0 10px 10px 0;
+      font-size: 1rem;
+      color: #1f2b38;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .callout strong {
+      color: #1f3b5c;
+    }
+
+    /* 强调色用于链接 */
+    a {
+      color: #2b6a9e;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: #134d7a;
+      border-bottom: 1px solid #2b6a9e;
+    }
+
+    /* 访问句 + 小提示 */
+    .visit-note {
+      background: #ffffff;
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0 2.8rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e4e8ed;
+    }
+
+    .faq-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0 0;
+    }
+
+    .faq-item {
+      background: transparent;
+      padding: 0.2rem 0;
+      border-bottom: 1px dashed #d5dce3;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #1d2c3b;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      color: #3f4a58;
+      font-size: 0.98rem;
+      margin-left: 0.2rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e6ec;
+      margin: 2rem 0 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 3.5rem 1.2rem 2.8rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .content {
+        padding: 2rem 1.2rem 3rem;
+      }
+      .visit-note {
+        padding: 1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图：稳定入口感 -->
+  <header class="hero">
+    <h1>一个稳定的入口</h1>
+    <p class="sub">页面说明 · 使用方式 · 结构介绍</p>
+    <div class="meta-line">2025 · 简明指南</div>
+  </header>
+
+  <!-- 浅色正文区：多段正文 + 引用 + 访问句 -->
+  <main class="content">
+
+    <p>
+      对一个站点而言，最基础也最容易被忽略的事情，是让访问者清楚自己正站在哪里、以及如何开始。围绕这一目的，我们整理了关于 <strong>xingkong.com</strong> 的一些说明——不是功能清单，而是从页面结构出发的“使用地图”。如果你习惯先了解全貌再动手，下面的内容会提供一个简洁的轮廓。
+    </p>
+
+    <p>
+      在信息组织中，<strong>稳定入口</strong>意味着无论从哪个路径进入，你都能快速定位到最近的核心功能。主页不堆砌装饰性元素，而是将导航、内容预览和常用操作放在几个明确的区域。每个区块都有对应的标题或分隔提示，避免在多个页面之间反复切换。这种设计思路能让初次接触的人也能凭直觉找到需要的东西。
+    </p>
+
+    <!-- 引用提示：承接上文 -->
+    <div class="callout">
+      <strong>提示：</strong> 若你希望直接了解所有可用模块，可以访问 <a href="https://beta-xingkong.com">xingkong.com</a> 并在页脚附近查看“页面说明”链接——那里汇总了每个区域的核心用途。不是说明书，更像一份快捷键参考。
+    </div>
+
+    <p>
+      从第二段开始，我们进入更具体的页面节奏说明。整个站点遵循“标题‑导语‑正文‑收束”的四段模式，每一篇内容都以一句话导语开头，简要说明该页面的切入角度。正文控制在三个自然段以内，避免大段无分节的文字。每篇末尾通常会放置一个与内容相关的访问句，它不引导跳转，而是对前文做一次安静的收束。这种结构既适合快速浏览，也保留了深度阅读的入口——你可以随时停下来，或者沿着内部链接继续。
+    </p>
+
+    <p>
+      关于视觉风格：深色头图作为视觉起点，承担了品牌的稳定感；正文区域使用浅色背景，降低长时间阅读的疲劳度。所有可点击的文本链接使用同一套强调色（#2b6a9e），并且只在鼠标悬停时出现下划线，保持版面的干净。卡片与区块之间采用微弱的阴影和圆角，但不会过度分层——我们希望内容本身成为视觉重心，而非装饰。
+    </p>
+
+    <!-- 访问句（自然嵌入句子） -->
+    <div class="visit-note">
+      <p style="margin-bottom: 0.8rem; font-weight: 450;">
+        ▎ 访问句
+      </p>
+      <p style="margin-bottom: 0;">
+        如果你正在寻找一个结构清晰、不制造噪音的页面作为起点，<a href="https://beta-xingkong.com">xingkong.com</a> 可以被当作一个安静的锚点。这里没有弹窗或强制引导，只有按顺序展开的正文和可选的延伸阅读。页面说明本身也遵守同样的节奏：先告诉你有什么，再让你自己决定怎么看。
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- FAQ 摘要（非全部，只选三个贴合主题） -->
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">Q: 这个页面的“稳定入口”具体指什么？</div>
+        <div class="faq-a">A: 指主页的导航与功能区布局在多次迭代中保持位置和名称不变，用户形成习惯后不需要重新学习。另外，所有内部链接都使用可预测的命名风格。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 导语和正文的分界明显吗？</div>
+        <div class="faq-a">A: 导语采用较浅的字体颜色和更宽的间距，与正文视觉分离。在移动端，导语会以独立的卡片形式呈现，确保段落节奏不受屏幕宽度影响。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 访问句是否可以理解为“底部结语”？</div>
+        <div class="faq-a">A: 不完全是。访问句会出现在每篇独立内容的末尾，它的作用是收束而非重复。你可以把它当作一次安静的停顿，之后再决定下一步浏览方向。</div>
+      </div>
+    </div>
+
+    <!-- 最后的提示（非链接） -->
+    <p style="margin-top: 2.2rem; font-size: 0.95rem; color: #5b6879; border-top: 1px solid #e4e8ed; padding-top: 1.6rem;">
+      以上内容基于稳定入口与页面说明的视角展开，所有描述均来自对站点实际结构的观察。你可以随时通过 <a href="https://beta-xingkong.com">xingkong.com</a> 验证这些说明是否与你的体验一致。
+    </p>
+
+  </main>
+
+</body>
+</html>
